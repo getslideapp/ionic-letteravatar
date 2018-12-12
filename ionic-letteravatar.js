@@ -46,7 +46,13 @@
 							shape : attrs.shape
 						};
 
-						var c = params.data.substr(0, params.charCount).toUpperCase();
+						scope.$watch(attrs.data, function (value){
+									var c = "";
+									if (value) {
+										var c = value.substr(0, params.charCount).toUpperCase();
+									}
+
+						// var c = params.data.substr(0, params.charCount).toUpperCase();
 						var cobj = getCharacterObject(c, params.textColor, params.fontFamily, params.fontWeight, params.fontsize);
 						var colorIndex = '';
 						var color = '';
@@ -80,6 +86,7 @@
 							component = "<img src=" + base + svgHtml + " style='" + _style + "' />";
 						}
 						element.replaceWith(component);
+						}); 
 					}
 				};
 			}
