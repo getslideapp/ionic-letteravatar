@@ -21,8 +21,8 @@
 		charCount : 1,
 		fontFamily : 'HelveticaNeue-Light,Helvetica Neue Light,Helvetica Neue,Helvetica, Arial,Lucida Grande, sans-serif',
 		base : 'data:image/svg+xml;base64,',
-		radius : 'border-radius:30px;'
-
+		radius : 30,
+		shape : 'round'
 	});
 
 	nla.directive('ionicLetterAvatar', ['defaultSettings', function (defaultSettings) {
@@ -43,7 +43,8 @@
 							avatarBorderStyle : attrs.avatarcustomborder,
 							avatardefaultBorder : attrs.avatarborder,
 							defaultBorder : defaultSettings.defaultBorder,
-							shape : attrs.shape
+							shape : attrs.shape || defaultSettings.shape,
+							radius : attrs.radius || defaultSettings.radius
 						};
 
 						scope.$watch(attrs.data, function (value){
@@ -80,8 +81,8 @@
 
 						if (params.shape) {
 							if (params.shape === 'round') {
-								var round_style = defaultSettings.radius + _style;
-								component = "<img src=" + base + svgHtml + " style='" + round_style + "' />";
+								var round_style = "border-radius:" + params.radius + "px;";
+								component = "<img src=" + base + svgHtml + " style='" + round_style + _style + "' />";
 							}
 						} else {
 							component = "<img src=" + base + svgHtml + " style='" + _style + "' />";
