@@ -44,7 +44,8 @@
 							avatardefaultBorder : attrs.avatarborder,
 							defaultBorder : defaultSettings.defaultBorder,
 							shape : attrs.shape || defaultSettings.shape,
-							radius : attrs.radius || defaultSettings.radius
+							radius : attrs.radius || defaultSettings.radius,
+							color : attrs.color
 						};
 
 						scope.$watch(attrs.data, function (value){
@@ -59,11 +60,15 @@
 						var colorIndex = '';
 						var color = '';
 
+						if(attrs.color){
+							color = attrs.color
+						}else{
 						if (c.charCodeAt(0) < 65) {
 							color = getRandomColors();
 						} else {
 							colorIndex = Math.floor((c.charCodeAt(0) - 65) % defaultSettings.alphabetcolors.length);
 							color = defaultSettings.alphabetcolors[colorIndex];
+						}
 						}
 
 						var svg = getImgTag(params.width, params.height, color);
