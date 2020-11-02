@@ -92,7 +92,8 @@
 						} else {
 							component = "<img src=" + base + svgHtml + " style='" + _style + "' />";
 						}
-						element.replaceWith(component);
+						element.empty();
+					        element.append(component);
 						});
 					}
 				};
