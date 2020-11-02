@@ -1,3 +1,5 @@
+# OUTDATED! LATEST VERSION IS TRACKED IN THE https://github.com/getslideapp/ionic-base REPO
+
 # ionic-letter-avatar <a href="http://uttesh.github.io/ionic-letteravatar">Demo</a>
 
 AngularJS directive for simple data avatar like gmail/inbox. 
