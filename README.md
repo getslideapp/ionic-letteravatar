@@ -1,4 +1,4 @@
-# OUTDATED! LATEST VERSION IS TRACKED IN THE https://github.com/getslideapp/ionic-base REPO
+# OUTDATED!!! LATEST VERSION IS TRACKED IN THE <a href-"https://github.com/getslideapp/ionic-base">IONIC-BASE REPO</a>
 
 # ionic-letter-avatar <a href="http://uttesh.github.io/ionic-letteravatar">Demo</a>
 
